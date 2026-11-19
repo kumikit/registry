@@ -1,0 +1,4 @@
+name = "Kumikit"
+key = "ed25519:00Ji-S866EV-IwRItk9Gk-M5N--4nvBzbbqvT6MRNNg"
+github = ["djotanov"]
+early = true
