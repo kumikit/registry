@@ -1,0 +1,82 @@
+# Checks every change to the registry and, on main, publishes index.json to GitHub Pages.
+# The checker is `kumikit-registry` from github.com/kumikit/kumikit, pinned to a commit.
+name: registry
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  # The kumikit commit whose checker this registry runs. Update it deliberately.
+  KUMIKIT_REV: d9df01f5444151cfd4601271866a6331e20ab30c
+  RUST: 1.100.0
+
+jobs:
+  check:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: registry
+          persist-credentials: false
+      # What the change is compared with: the pull request's base, or main before a push.
+      - if: github.event_name == 'pull_request'
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.base.sha }}
+          path: base
+          persist-credentials: false
+      - if: github.event_name == 'push' && github.event.before != '0000000000000000000000000000000000000000'
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.before }}
+          path: base
+          persist-credentials: false
+      - uses: actions/cache@v4
+        with:
+          path: ~/.cargo/bin/kumikit-registry
+          key: kumikit-registry-${{ env.KUMIKIT_REV }}-${{ env.RUST }}
+      - name: Install the checker
+        run: |
+          if [ ! -x ~/.cargo/bin/kumikit-registry ]; then
+            rustup toolchain install "$RUST" --profile minimal
+            cargo +"$RUST" install --locked --git https://github.com/kumikit/kumikit --rev "$KUMIKIT_REV" kumikit-registry-tool
+          fi
+      - name: Check
+        env:
+          AUTHOR: ${{ github.event.pull_request.user.login }}
+        run: |
+          set -- registry --require-early
+          if [ -d base ]; then set -- "$@" --base base; fi
+          if [ -n "$AUTHOR" ]; then set -- "$@" --author "$AUTHOR"; fi
+          ~/.cargo/bin/kumikit-registry check "$@"
+      - name: Build the index
+        run: |
+          mkdir site
+          ~/.cargo/bin/kumikit-registry build-index registry --name Kumikit -o site/index.json
+      - if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+  pages:
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+    needs: check
+    runs-on: ubuntu-24.04
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}index.json
+    concurrency:
+      group: pages
+      cancel-in-progress: false
+    steps:
+      - id: deploy
+        uses: actions/deploy-pages@v4

@@ -1,0 +1,3 @@
+# Plugin ids offered on the first-run screen ("Browse the starter pack"), in order.
+# Every id must be in this registry.
+ids = []

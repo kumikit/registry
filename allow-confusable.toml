@@ -1,0 +1,7 @@
+# Reviewed exceptions to the confusable-id check. A maintainer adds an entry when a new
+# id is close to an existing one on purpose, for example:
+#
+# [[allow]]
+# id = "acme.probe2"
+# like = "acme.probe"
+allow = []
