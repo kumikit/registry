@@ -11,11 +11,6 @@ on:
 permissions:
   contents: read
 
-env:
-  # The kumikit release tag whose checker this registry runs. Update it deliberately.
-  KUMIKIT_TAG: v0.1.0-m5
-  RUST: 1.100.0
-
 jobs:
   check:
     runs-on: ubuntu-24.04
@@ -37,16 +32,10 @@ jobs:
           ref: ${{ github.event.before }}
           path: base
           persist-credentials: false
-      - uses: actions/cache@v4
+      # Pinned to a kumikit release tag; update deliberately.
+      - uses: kumikit/kumikit/.github/actions/setup-kumikit@v0.1.0-m5.1
         with:
-          path: ~/.cargo/bin/kumikit-registry
-          key: kumikit-registry-${{ env.KUMIKIT_TAG }}-${{ env.RUST }}
-      - name: Install the checker
-        run: |
-          if [ ! -x ~/.cargo/bin/kumikit-registry ]; then
-            rustup toolchain install "$RUST" --profile minimal
-            cargo +"$RUST" install --locked --git https://github.com/kumikit/kumikit --tag "$KUMIKIT_TAG" kumikit-registry-tool
-          fi
+          tools: kumikit-registry
       - name: Check
         env:
           AUTHOR: ${{ github.event.pull_request.user.login }}
@@ -54,11 +43,11 @@ jobs:
           set -- registry --require-early
           if [ -d base ]; then set -- "$@" --base base; fi
           if [ -n "$AUTHOR" ]; then set -- "$@" --author "$AUTHOR"; fi
-          ~/.cargo/bin/kumikit-registry check "$@"
+          kumikit-registry check "$@"
       - name: Build the index
         run: |
           mkdir site
-          ~/.cargo/bin/kumikit-registry build-index registry --name Kumikit -o site/index.json
+          kumikit-registry build-index registry --name Kumikit -o site/index.json
       - if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
         uses: actions/upload-pages-artifact@v3
         with:
