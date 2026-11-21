@@ -1,5 +1,5 @@
 # Checks every change to the registry and, on main, publishes index.json to GitHub Pages.
-# The checker is `kumikit-registry` from github.com/kumikit/kumikit, pinned to a commit.
+# The checker is `kumikit-registry` from github.com/kumikit/kumikit, pinned to a release tag.
 name: registry
 
 on:
@@ -12,8 +12,8 @@ permissions:
   contents: read
 
 env:
-  # The kumikit commit whose checker this registry runs. Update it deliberately.
-  KUMIKIT_REV: d9df01f5444151cfd4601271866a6331e20ab30c
+  # The kumikit release tag whose checker this registry runs. Update it deliberately.
+  KUMIKIT_TAG: v0.1.0-m5
   RUST: 1.100.0
 
 jobs:
@@ -40,12 +40,12 @@ jobs:
       - uses: actions/cache@v4
         with:
           path: ~/.cargo/bin/kumikit-registry
-          key: kumikit-registry-${{ env.KUMIKIT_REV }}-${{ env.RUST }}
+          key: kumikit-registry-${{ env.KUMIKIT_TAG }}-${{ env.RUST }}
       - name: Install the checker
         run: |
           if [ ! -x ~/.cargo/bin/kumikit-registry ]; then
             rustup toolchain install "$RUST" --profile minimal
-            cargo +"$RUST" install --locked --git https://github.com/kumikit/kumikit --rev "$KUMIKIT_REV" kumikit-registry-tool
+            cargo +"$RUST" install --locked --git https://github.com/kumikit/kumikit --tag "$KUMIKIT_TAG" kumikit-registry-tool
           fi
       - name: Check
         env:
