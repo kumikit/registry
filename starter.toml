@@ -1,3 +1,13 @@
 # Plugin ids offered on the first-run screen ("Browse the starter pack"), in order.
 # Every id must be in this registry.
-ids = []
+ids = [
+  "kumikit.provider-claude",
+  "kumikit.provider-antigravity",
+  "kumikit.provider-copilot",
+  "kumikit.provider-cursor",
+  "kumikit.provider-opencode",
+  "kumikit.git",
+  "kumikit.ui-git",
+  "kumikit.github",
+  "kumikit.schedules",
+]

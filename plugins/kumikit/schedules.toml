@@ -1,0 +1,18 @@
+id = "kumikit.schedules"
+name = "Scheduled Prompts"
+description = "Create recurring agent prompts on a cron schedule in any open workspace."
+repository = "https://github.com/kumikit/kumikit-plugin-schedules"
+license = "MIT"
+kind = ["integration"]
+
+[[versions]]
+version = "0.1.0"
+url = "https://github.com/kumikit/kumikit/releases/download/plugins-2026-11-21/kumikit.schedules-0.1.0.kkp"
+sha256 = "6a17a14d40393c5a38ce75398a0da72900db38f7fe0a34bbb4a82d51a2d9d0e3"
+api = "^0.2"
+
+[versions.permissions]
+files = "none"
+client = ["threads.create", "threads.send", "workspaces.list"]
+workspaces = "all"
+schedules = true

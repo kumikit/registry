@@ -1,0 +1,17 @@
+id = "kumikit.provider-opencode"
+name = "OpenCode"
+description = "OpenCode as a Kumikit provider, over its Agent Client Protocol mode."
+repository = "https://github.com/kumikit/kumikit-plugin-agents"
+license = "MIT"
+kind = ["provider"]
+
+[[versions]]
+version = "0.1.0"
+url = "https://github.com/kumikit/kumikit/releases/download/plugins-2026-11-21/kumikit.provider-opencode-0.1.0.kkp"
+sha256 = "54b7378308b82eeebbd2c4738d67e9e3865c701f041df616480df9f8636d827c"
+api = "^0.2"
+
+[versions.permissions]
+spawn = ["opencode"]
+files = "none"
+tools = true

@@ -1,0 +1,17 @@
+id = "kumikit.provider-claude"
+name = "Claude Code"
+description = "Claude Code over its native stream-json stdio protocol, and the `claude` backend for Anthropic-compatible endpoints."
+repository = "https://github.com/kumikit/kumikit-plugin-agents"
+license = "MIT"
+kind = ["provider"]
+
+[[versions]]
+version = "0.1.0"
+url = "https://github.com/kumikit/kumikit/releases/download/plugins-2026-11-21/kumikit.provider-claude-0.1.0.kkp"
+sha256 = "4cc30ce0f792df9704b8e47d1e05413cac0910d5af88f61bc90826a7819ecea0"
+api = "^0.2"
+
+[versions.permissions]
+spawn = ["claude"]
+files = "none"
+tools = true
