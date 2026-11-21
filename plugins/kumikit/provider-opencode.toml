@@ -15,3 +15,14 @@ api = "^0.2"
 spawn = ["opencode"]
 files = "none"
 tools = true
+
+[[versions]]
+version = "0.1.1"
+url = "https://github.com/kumikit/kumikit-plugin-agents/releases/download/provider-opencode-v0.1.1/kumikit.provider-opencode-0.1.1.kkp"
+sha256 = "5adb9c5f6acdb2865fdb542746777b924aeebb534121d3795a08b4b1fb1463e4"
+api = "^0.2"
+
+[versions.permissions]
+spawn = ["opencode"]
+files = "none"
+tools = true

@@ -15,3 +15,14 @@ api = "^0.2"
 spawn = ["claude"]
 files = "none"
 tools = true
+
+[[versions]]
+version = "0.1.1"
+url = "https://github.com/kumikit/kumikit-plugin-agents/releases/download/provider-claude-v0.1.1/kumikit.provider-claude-0.1.1.kkp"
+sha256 = "40c0d15190247a91b97f4008045316e43596fc21df0be10646bcb6f92a28e0e0"
+api = "^0.2"
+
+[versions.permissions]
+spawn = ["claude"]
+files = "none"
+tools = true
