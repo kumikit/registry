@@ -1,0 +1,17 @@
+id = "kumikit.provider-copilot"
+name = "GitHub Copilot CLI"
+description = "GitHub Copilot CLI as a Kumikit provider, over its Agent Client Protocol mode."
+repository = "https://github.com/kumikit/kumikit-plugin-agents"
+license = "MIT"
+kind = ["provider"]
+
+[[versions]]
+version = "0.1.0"
+url = "https://github.com/kumikit/kumikit/releases/download/plugins-2026-11-21/kumikit.provider-copilot-0.1.0.kkp"
+sha256 = "157cf711da231fb4a8751636b94b10dc8439f7413f0fa30b569e5b7d216c44ee"
+api = "^0.2"
+
+[versions.permissions]
+spawn = ["copilot"]
+files = "none"
+tools = true

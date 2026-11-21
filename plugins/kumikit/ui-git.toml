@@ -1,0 +1,14 @@
+id = "kumikit.ui-git"
+name = "Git Changes"
+description = "Inspector panel showing changed files, unified diffs and recent commits from kumikit.git."
+repository = "https://github.com/kumikit/kumikit-plugin-git"
+license = "MIT"
+kind = ["ui"]
+
+[[versions]]
+version = "0.1.0"
+url = "https://github.com/kumikit/kumikit/releases/download/plugins-2026-11-21/kumikit.ui-git-0.1.0.kkp"
+sha256 = "010db8b1225c0dec4985605a3670271aef1d0e1d4f406203afdff1bc46e3312c"
+api = "^0.1.2"
+isolation = "iframe"
+requires-core = ["kumikit.git@^0.1"]

@@ -1,0 +1,17 @@
+id = "kumikit.provider-antigravity"
+name = "Antigravity"
+description = "Google Antigravity CLI as a Kumikit provider, over its Agent Client Protocol mode."
+repository = "https://github.com/kumikit/kumikit-plugin-agents"
+license = "MIT"
+kind = ["provider"]
+
+[[versions]]
+version = "0.1.0"
+url = "https://github.com/kumikit/kumikit/releases/download/plugins-2026-11-21/kumikit.provider-antigravity-0.1.0.kkp"
+sha256 = "b369ea400519a2e2442ae28f5cf344c42db64226bbf57bf1c7ca73a0a06cc31e"
+api = "^0.2"
+
+[versions.permissions]
+spawn = ["agy"]
+files = "none"
+tools = true

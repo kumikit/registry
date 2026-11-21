@@ -1,0 +1,16 @@
+id = "kumikit.git"
+name = "Git"
+description = "Read-only Git status, diff, log, show and branches tools for agents and the Changes panel."
+repository = "https://github.com/kumikit/kumikit-plugin-git"
+license = "MIT"
+kind = ["tool", "integration"]
+
+[[versions]]
+version = "0.1.0"
+url = "https://github.com/kumikit/kumikit/releases/download/plugins-2026-11-21/kumikit.git-0.1.0.kkp"
+sha256 = "b6a6377938fcd787440c1c4720eb497d9952c5fcddbf1eff0deaf409453e326a"
+api = "^0.2"
+
+[versions.permissions]
+spawn = ["git"]
+files = "none"

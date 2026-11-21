@@ -1,0 +1,17 @@
+id = "kumikit.provider-cursor"
+name = "Cursor CLI"
+description = "Cursor's agent CLI as a Kumikit provider, over its Agent Client Protocol mode."
+repository = "https://github.com/kumikit/kumikit-plugin-agents"
+license = "MIT"
+kind = ["provider"]
+
+[[versions]]
+version = "0.1.0"
+url = "https://github.com/kumikit/kumikit/releases/download/plugins-2026-11-21/kumikit.provider-cursor-0.1.0.kkp"
+sha256 = "35e4f81e7d9d0ac5b21d41518e2be4aef3487808ff18344ef994475617472b04"
+api = "^0.2"
+
+[versions.permissions]
+spawn = ["cursor-agent"]
+files = "none"
+tools = true

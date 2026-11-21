@@ -1,0 +1,17 @@
+id = "kumikit.github"
+name = "GitHub"
+description = "Read and create GitHub pull requests, issues and commit checks over the GitHub REST API."
+repository = "https://github.com/kumikit/kumikit-plugin-github"
+license = "MIT"
+kind = ["tool"]
+
+[[versions]]
+version = "0.1.0"
+url = "https://github.com/kumikit/kumikit/releases/download/plugins-2026-11-21/kumikit.github-0.1.0.kkp"
+sha256 = "e24db498cb20e6e274834c76fd91782c4c6eab48655f533a85d008aff3d9e7de"
+api = "^0.2"
+
+[versions.permissions]
+network = ["api.github.com"]
+files = "none"
+secrets = ["github-token"]
