@@ -16,3 +16,15 @@ files = "none"
 client = ["threads.create", "threads.send", "workspaces.list"]
 workspaces = "all"
 schedules = true
+
+[[versions]]
+version = "0.1.1"
+url = "https://github.com/kumikit/kumikit-plugin-schedules/releases/download/schedules-v0.1.1/kumikit.schedules-0.1.1.kkp"
+sha256 = "4b64fde3aa893fbf8ecac3fc41436a6dc98c5e55a17d3df39fddc6505614b685"
+api = "^0.2"
+
+[versions.permissions]
+files = "none"
+client = ["threads.create", "threads.send", "workspaces.list"]
+workspaces = "all"
+schedules = true
