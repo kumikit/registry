@@ -12,3 +12,11 @@ sha256 = "010db8b1225c0dec4985605a3670271aef1d0e1d4f406203afdff1bc46e3312c"
 api = "^0.1.2"
 isolation = "iframe"
 requires-core = ["kumikit.git@^0.1"]
+
+[[versions]]
+version = "0.1.1"
+url = "https://github.com/kumikit/kumikit-plugin-git/releases/download/ui-git-v0.1.1/kumikit.ui-git-0.1.1.kkp"
+sha256 = "3fa7a58f52a000562d7a73a54d270724ce73581381456a61c35612e69e190326"
+api = "^0.1.2"
+isolation = "iframe"
+requires-core = ["kumikit.git@^0.1"]
