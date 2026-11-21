@@ -15,3 +15,14 @@ api = "^0.2"
 spawn = ["agy"]
 files = "none"
 tools = true
+
+[[versions]]
+version = "0.1.1"
+url = "https://github.com/kumikit/kumikit-plugin-agents/releases/download/provider-antigravity-v0.1.1/kumikit.provider-antigravity-0.1.1.kkp"
+sha256 = "2aad4f2b0db2bf1d30e03a58a69836082e040708bf4301d05912865d72ceebe3"
+api = "^0.2"
+
+[versions.permissions]
+spawn = ["agy"]
+files = "none"
+tools = true
