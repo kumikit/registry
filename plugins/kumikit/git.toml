@@ -14,3 +14,13 @@ api = "^0.2"
 [versions.permissions]
 spawn = ["git"]
 files = "none"
+
+[[versions]]
+version = "0.1.1"
+url = "https://github.com/kumikit/kumikit-plugin-git/releases/download/git-v0.1.1/kumikit.git-0.1.1.kkp"
+sha256 = "ff555a09060176185feaefd18d0b847a8774ecc75ef977437032409cac120e40"
+api = "^0.2"
+
+[versions.permissions]
+spawn = ["git"]
+files = "none"
