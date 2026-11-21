@@ -6,17 +6,6 @@ license = "MIT"
 kind = ["tool"]
 
 [[versions]]
-version = "0.1.0"
-url = "https://github.com/kumikit/kumikit/releases/download/plugins-2026-11-21/kumikit.github-0.1.0.kkp"
-sha256 = "e24db498cb20e6e274834c76fd91782c4c6eab48655f533a85d008aff3d9e7de"
-api = "^0.2"
-
-[versions.permissions]
-network = ["api.github.com"]
-files = "none"
-secrets = ["github-token"]
-
-[[versions]]
 version = "0.1.1"
 url = "https://github.com/kumikit/kumikit-plugin-github/releases/download/github-v0.1.1/kumikit.github-0.1.1.kkp"
 sha256 = "7171c0026dd314a89ff613553cb5b8f0a7f69d7f036432721b37c69a9e5cc89c"

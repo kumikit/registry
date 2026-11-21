@@ -6,17 +6,6 @@ license = "MIT"
 kind = ["provider"]
 
 [[versions]]
-version = "0.1.0"
-url = "https://github.com/kumikit/kumikit/releases/download/plugins-2026-11-21/kumikit.provider-opencode-0.1.0.kkp"
-sha256 = "54b7378308b82eeebbd2c4738d67e9e3865c701f041df616480df9f8636d827c"
-api = "^0.2"
-
-[versions.permissions]
-spawn = ["opencode"]
-files = "none"
-tools = true
-
-[[versions]]
 version = "0.1.1"
 url = "https://github.com/kumikit/kumikit-plugin-agents/releases/download/provider-opencode-v0.1.1/kumikit.provider-opencode-0.1.1.kkp"
 sha256 = "5adb9c5f6acdb2865fdb542746777b924aeebb534121d3795a08b4b1fb1463e4"

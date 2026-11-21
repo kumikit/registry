@@ -6,17 +6,6 @@ license = "MIT"
 kind = ["provider"]
 
 [[versions]]
-version = "0.1.0"
-url = "https://github.com/kumikit/kumikit/releases/download/plugins-2026-11-21/kumikit.provider-antigravity-0.1.0.kkp"
-sha256 = "b369ea400519a2e2442ae28f5cf344c42db64226bbf57bf1c7ca73a0a06cc31e"
-api = "^0.2"
-
-[versions.permissions]
-spawn = ["agy"]
-files = "none"
-tools = true
-
-[[versions]]
 version = "0.1.1"
 url = "https://github.com/kumikit/kumikit-plugin-agents/releases/download/provider-antigravity-v0.1.1/kumikit.provider-antigravity-0.1.1.kkp"
 sha256 = "2aad4f2b0db2bf1d30e03a58a69836082e040708bf4301d05912865d72ceebe3"

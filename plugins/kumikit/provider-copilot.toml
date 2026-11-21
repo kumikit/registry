@@ -6,17 +6,6 @@ license = "MIT"
 kind = ["provider"]
 
 [[versions]]
-version = "0.1.0"
-url = "https://github.com/kumikit/kumikit/releases/download/plugins-2026-11-21/kumikit.provider-copilot-0.1.0.kkp"
-sha256 = "157cf711da231fb4a8751636b94b10dc8439f7413f0fa30b569e5b7d216c44ee"
-api = "^0.2"
-
-[versions.permissions]
-spawn = ["copilot"]
-files = "none"
-tools = true
-
-[[versions]]
 version = "0.1.1"
 url = "https://github.com/kumikit/kumikit-plugin-agents/releases/download/provider-copilot-v0.1.1/kumikit.provider-copilot-0.1.1.kkp"
 sha256 = "34025d3728121555673cda847c4b6a31daf7d1043f9c4ed78768af19decd4116"

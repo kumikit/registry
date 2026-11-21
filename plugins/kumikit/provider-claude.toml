@@ -6,17 +6,6 @@ license = "MIT"
 kind = ["provider"]
 
 [[versions]]
-version = "0.1.0"
-url = "https://github.com/kumikit/kumikit/releases/download/plugins-2026-11-21/kumikit.provider-claude-0.1.0.kkp"
-sha256 = "4cc30ce0f792df9704b8e47d1e05413cac0910d5af88f61bc90826a7819ecea0"
-api = "^0.2"
-
-[versions.permissions]
-spawn = ["claude"]
-files = "none"
-tools = true
-
-[[versions]]
 version = "0.1.1"
 url = "https://github.com/kumikit/kumikit-plugin-agents/releases/download/provider-claude-v0.1.1/kumikit.provider-claude-0.1.1.kkp"
 sha256 = "40c0d15190247a91b97f4008045316e43596fc21df0be10646bcb6f92a28e0e0"

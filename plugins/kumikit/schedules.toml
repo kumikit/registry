@@ -6,18 +6,6 @@ license = "MIT"
 kind = ["integration"]
 
 [[versions]]
-version = "0.1.0"
-url = "https://github.com/kumikit/kumikit/releases/download/plugins-2026-11-21/kumikit.schedules-0.1.0.kkp"
-sha256 = "6a17a14d40393c5a38ce75398a0da72900db38f7fe0a34bbb4a82d51a2d9d0e3"
-api = "^0.2"
-
-[versions.permissions]
-files = "none"
-client = ["threads.create", "threads.send", "workspaces.list"]
-workspaces = "all"
-schedules = true
-
-[[versions]]
 version = "0.1.1"
 url = "https://github.com/kumikit/kumikit-plugin-schedules/releases/download/schedules-v0.1.1/kumikit.schedules-0.1.1.kkp"
 sha256 = "4b64fde3aa893fbf8ecac3fc41436a6dc98c5e55a17d3df39fddc6505614b685"
