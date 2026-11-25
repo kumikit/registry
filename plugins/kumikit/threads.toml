@@ -1,0 +1,17 @@
+id = "kumikit.threads"
+name = "Threads"
+description = "Agent tools for scheduling wake-ups, reading and messaging threads, managing queues, and suggesting titles."
+repository = "https://github.com/kumikit/kumikit-plugin-threads"
+license = "MIT"
+kind = ["tool"]
+
+[[versions]]
+version = "0.1.0"
+url = "https://github.com/kumikit/kumikit-plugin-threads/releases/download/threads-v0.1.0/kumikit.threads-0.1.0.kkp"
+sha256 = "7f5e62fe73379ea027da90dbf35fd25c6afd1820b09ee62e5455bac1bf8c3f7d"
+api = "^0.2"
+
+[versions.permissions]
+files = "none"
+client = ["threads.defer", "threads.queue", "threads.read", "threads.send", "threads.steer", "threads.title.suggest", "workspaces.list"]
+workspaces = "linked"
