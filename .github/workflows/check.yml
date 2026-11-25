@@ -33,7 +33,7 @@ jobs:
           path: base
           persist-credentials: false
       # Pinned to a kumikit release tag; update deliberately.
-      - uses: kumikit/kumikit/.github/actions/setup-kumikit@v0.1.0-m5.1
+      - uses: kumikit/kumikit/.github/actions/setup-kumikit@v0.1.0-m7
         with:
           tools: kumikit-registry
       - name: Check
