@@ -15,3 +15,14 @@ api = "^0.2"
 spawn = ["copilot"]
 files = "none"
 tools = true
+
+[[versions]]
+version = "0.1.2"
+url = "https://github.com/kumikit/kumikit-plugin-agents/releases/download/provider-copilot-v0.1.2/kumikit.provider-copilot-0.1.2.kkp"
+sha256 = "39c4ff64dc92d634bf3100c7dfd2028f981fadd0e1e253419be4256d3c7c8765"
+api = "^0.2"
+
+[versions.permissions]
+spawn = ["copilot"]
+files = "none"
+tools = true

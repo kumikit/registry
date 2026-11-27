@@ -15,3 +15,14 @@ api = "^0.2"
 spawn = ["cursor-agent"]
 files = "none"
 tools = true
+
+[[versions]]
+version = "0.1.2"
+url = "https://github.com/kumikit/kumikit-plugin-agents/releases/download/provider-cursor-v0.1.2/kumikit.provider-cursor-0.1.2.kkp"
+sha256 = "7b11776f0b82a4d91be092be5f96a3ab48ad8cb1af1d0a23c20e7555963e7e95"
+api = "^0.2"
+
+[versions.permissions]
+spawn = ["cursor-agent"]
+files = "none"
+tools = true
