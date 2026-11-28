@@ -37,3 +37,14 @@ api = "^0.2"
 spawn = ["claude"]
 files = "none"
 tools = true
+
+[[versions]]
+version = "0.2.0"
+url = "https://github.com/kumikit/kumikit-plugin-agents/releases/download/provider-claude-v0.2.0/kumikit.provider-claude-0.2.0.kkp"
+sha256 = "1d3a7eb97f56078df474ce4f0e880cabe3e9f0da9bf52bb0cafe0b5ca4deb762"
+api = "^0.2"
+
+[versions.permissions]
+spawn = ["claude"]
+files = "none"
+tools = true
