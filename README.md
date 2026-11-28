@@ -73,7 +73,7 @@ with the same checker.
    permissions = { spawn = ["some-agent"] }       # copied from the manifest (core plugins)
    ```
 
-   UI plugins and themes copy `isolation` and `network` from the manifest's `[ui]`, and
+   UI plugins copy `isolation` and `network` from the manifest's `[ui]`, and
    `requires-core` from its `[requires] core`, instead of `permissions`.
 
 ## What CI checks
