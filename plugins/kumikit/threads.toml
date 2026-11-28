@@ -10,6 +10,7 @@ version = "0.1.0"
 url = "https://github.com/kumikit/kumikit-plugin-threads/releases/download/threads-v0.1.0/kumikit.threads-0.1.0.kkp"
 sha256 = "7f5e62fe73379ea027da90dbf35fd25c6afd1820b09ee62e5455bac1bf8c3f7d"
 api = "^0.2"
+yanked = true
 
 [versions.permissions]
 files = "none"
